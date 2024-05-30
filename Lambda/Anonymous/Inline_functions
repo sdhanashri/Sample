@@ -1,0 +1,131 @@
+#ANONYMOUS / LAMBDA / INLINE FUNCTIONS
+
+# syntax: [lambda arguments : expressions]
+
+# #1)Addition
+# add=lambda x,y: x + y
+# print(add(10,20))
+
+# #2)Print the greatest number
+# greatest=lambda x,y: x if x>y else y
+# print(greatest(20,80))
+
+
+
+
+
+
+# #3)Find Positive, negative numbers
+# n=int(input("enter the number :"))
+# num=lambda n :  "Positive  number" if n>0 else "Negative number"
+# print(num(n))
+
+# #4)Even, odd numbers
+# n=int(input("Enter the number: "))
+# num=lambda x : "Even number" if x%2==0 else "Odd number"
+# print(num(n))
+
+#****************  SPECIAL FUNCTIONS   *****************
+
+# I] FILTER / lambda function using filter /special function
+
+# l1=[1,2,3,4,-3,-4,-5]
+# pos=lambda x:x if x>0 else 0
+
+# l2=tuple(filter(pos,l1))
+# print(l2)
+
+#******************   TASK   ****************
+
+# # 1)Find even odd number list
+
+# i=range(1,50)
+# a=lambda x:x if x%2==0 else 0
+# b=lambda x:x if x%2!=0 else 0
+
+# l1=list(filter(a,i))
+# l2=list(filter(b,i))
+# print("The Even number between 1 to 100 is:",l1)
+# print("The Odd number between 1 to 100 is:",l2)
+
+
+# 2)Write a Python program that creates a list of names and uses the filter function to extract names 
+    #that start with a vowel (A, E, I, O, U).
+
+# l1=["dhanashri","akshata","sakshi","utkarsha","gayatri","esha"]
+# vow=["a","e","i","o", "u"]
+# def vowel(l):
+#     if l[0].lower() in vow:
+#         return l 
+
+# l2=list(filter(vowel,l1))
+# print(l2)
+
+
+# 3) Write a Python program that creates a list of tuples, each containing a city name and its population. 
+     #Use the filter function to extract cities with a population greater than 2 million.
+
+# t1= [("nashik",1000000),
+#      ("pune",4000000),
+#      ("mumbai",5000000),
+#      ("delhi",1500000)]
+# def city_population(population):
+#     if population[1] > 2000000:
+#         return population
+
+# l1=list(filter(city_population,t1))
+# print(l1)
+
+# # II]MAP
+
+# list1=[1,2,3,4,3,4,5]           #square of list
+# pos=lambda x:x**2  
+          
+# list2=list(map(pos,list1))
+# print(list2)
+
+# # 1) Write a Python program to add three given lists using Python map and lambda.
+
+# l1=[1,2,3,4]
+# l2=[1,2,34,5]
+# l3=[6,7,8,9]
+
+# a=lambda x,y,z: x+y+z
+
+# add=list(map(a,l1,l2,l3))
+# print(add)
+
+# 2) Write a Python program to triple all numbers in a given list of integers. Use Python map
+
+# l1=[1,2,3,4,5]
+# a=lambda x:x+x+x            #OR a=lambda x:x*3
+
+# l2=list(map(a,l1))
+# print(l2)
+
+# 3) Write a Python program to listify the list of given strings individually using Python map.
+
+# l1=['red','blue','green']
+
+# list1=list(map(list,l1))
+# print(list1)
+
+# #III] REDUCE
+
+# import functools
+# list1=[1,2,3,4,-3,-4,-5]
+# pos=lambda x,y:x if x>y else y
+          
+# list2=functools.reduce(pos,list1)
+# print(list2)
+
+# 1)Add all elements in a list using reduce function
+
+# import functools
+# list1=[1,2,3,4,-3,-4,-5]
+
+# add=functools.reduce(lambda x,y: x+y,list1)
+# print(add)
+
+
+
